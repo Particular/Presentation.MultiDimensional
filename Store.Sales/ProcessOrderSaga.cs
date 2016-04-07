@@ -21,7 +21,7 @@ public class ProcessOrderSaga : Saga<ProcessOrderSaga.OrderData>,
         Data.ProductIds = message.ProductIds;
         Data.ClientId = message.ClientId;
 
-        await RequestTimeout(context, TimeSpan.FromSeconds(20), new BuyersRemorseIsOver());
+        await RequestTimeout(context, TimeSpan.FromSeconds(30), new BuyersRemorseIsOver());
         Console.WriteLine("Starting cool down period for order #{0}.", Data.OrderNumber);
     }
 
