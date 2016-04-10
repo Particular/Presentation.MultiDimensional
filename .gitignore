@@ -87,3 +87,4 @@ src/scaffolding.config
 # JetBrains Rider
 .idea/
 *.sln.iml
+Store.ECommerce/App_Data/*.txt
