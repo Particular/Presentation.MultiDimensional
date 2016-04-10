@@ -12,8 +12,7 @@ class Program
 
     static async Task AsyncMain()
     {
-        EndpointConfiguration endpointConfiguration = new EndpointConfiguration();
-        endpointConfiguration.EndpointName("Store.Sales");
+        EndpointConfiguration endpointConfiguration = new EndpointConfiguration("Store.Sales");
         endpointConfiguration.ApplyCommonConfiguration();
         endpointConfiguration.SendFailedMessagesTo("error");
 

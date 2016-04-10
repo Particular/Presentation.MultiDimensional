@@ -12,8 +12,7 @@ class Program
 
     static async Task AsyncMain()
     {
-        EndpointConfiguration endpointConfiguration = new EndpointConfiguration();
-        endpointConfiguration.EndpointName("Store.CustomerRelations");
+        EndpointConfiguration endpointConfiguration = new EndpointConfiguration("Store.CustomerRelations");
         endpointConfiguration.ApplyCommonConfiguration();
         endpointConfiguration.SendFailedMessagesTo("error");
         IEndpointInstance endpoint = await Endpoint.Start(endpointConfiguration);
